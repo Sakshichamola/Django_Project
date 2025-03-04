@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Blogs</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>All Blogs</h2>
+        {% for blog in blogs %}
+            <div class="blog-post">
+                <h3>{{ blog.title }}</h3>
+                <p><strong>By:</strong> {{ blog.name }}</p>
+                <p>{{ blog.content }}</p>
+                <p><small>Posted on: {{ blog.created_at }}</small></p>
+            </div>
+        {% empty %}
+            <p>No blogs found.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

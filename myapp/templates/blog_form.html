@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Blog</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Write a Blog</h2>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <label>Name:</label>
+            <input type="text" name="name" required>
+        
+            <label>Title:</label>
+            <input type="text" name="title" required>
+        
+            <label>Content:</label>
+            <textarea name="content" rows="5" required></textarea>
+        
+            <button type="submit">Submit</button>
+        </form>
+        
+    </div>
+</body>
+</html>

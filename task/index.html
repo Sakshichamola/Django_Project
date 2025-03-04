@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-globe"></i> Single Page Application</h1>
+        <button class="logout-btn" onclick="logout()">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+    </header>
+    
+    <div class="container">
+        <aside class="sidebar">
+            <button onclick="loadPage('home')"><i class="fas fa-home"></i> Home</button>
+            <button onclick="loadPage('services')"><i class="fas fa-cogs"></i> Services</button>
+            <button onclick="loadPage('contact')"><i class="fas fa-envelope"></i> Contact</button>
+        </aside>
+        <main class="content" id="content">
+            <h2>Welcome!</h2>
+            <p>Select a page from the sidebar.</p>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

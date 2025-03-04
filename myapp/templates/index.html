@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Let's Explore</h1>
+        
+        <!-- Dropdown Button -->
+        <div class="dropdown">
+            <button class="dropbtn">Menu &#9662;</button>
+            <div class="dropdown-content">
+                <a href="{% url 'update_account' %}">Update Account</a>
+                <a href="{% url 'delete_account' %}">Delete Account</a>
+                <a href="{% url 'logout' %}">Logout</a>
+                <a href="{% url 'blog_form' %}">Write Blog</a>
+                <a href="{% url 'blog_list' %}" class="button">View Blogs</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="item">
+            <img src="https://th.bing.com/th/id/OIP.Q5qWgU5K29v8uMzE3-VCjwHaE8?rs=1&pid=ImgDetMain" alt="First Image">
+            <p><b>Mountains</b></p>
+            <p>A mountain is an elevated portion of the Earth's crust, generally with steep sides that show significant exposed bedrock.</p>
+        </div>
+        <div class="item">
+            <img src="https://th.bing.com/th/id/OIP.RiAwMqCxjeA1eT47OC-f0gHaFM?rs=1&pid=ImgDetMain" alt="Second Image">
+            <p><b>Beaches</b></p>
+            <p>A beach is a landform alongside a body of water which consists of loose particles.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 YourSite. All Rights Reserved.</p>
+    </footer>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

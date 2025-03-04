@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Account</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Update Account</h2>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="New Username" required>
+            <button type="submit" class="update-btn">Update</button>
+        </form>
+        <a href="{% url 'index' %}" class="cancel-link">Cancel</a>
+    </div>
+</body>
+</html>
