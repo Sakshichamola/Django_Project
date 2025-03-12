@@ -1,7 +1,7 @@
 # Django Project
 
 ## 📌 Overview
-This is a Django-based web application that provides a sigup, login page with a web page 
+This is a Django-based web application that provides a signup, login page with a web page 
 
 ## 🚀 Features
 - User authentication (Login/Signup)
